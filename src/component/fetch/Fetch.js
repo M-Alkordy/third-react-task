@@ -29,10 +29,3 @@ price: "{props.price}",
 }
 
 export default Fetch
-
-/* ,{
-  method:"${props.method}",
-  body:
-
-} */
-/* /${props.id} */
