@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 
 function Fetch(props) {
   const url =`https://fakestoreapi.com/products/${props.id}`;
@@ -22,9 +23,11 @@ price: "{props.price}",
     .catch(error =>console.log(error));
   }
 
-  GetDataFromApi();
+  useEffect(() => {
+    GetDataFromApi()}, [])
+  
   return (
-    <div></div>
+    <div>{props.children}</div>
   )
 }
 
